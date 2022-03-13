@@ -1,10 +1,16 @@
 /* GENERAL STYLES */
 body {
   font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 4.2rem 4.2rem;
 }
 
 .logo {
   font-size: 2.4rem;
+  font-weight: 600;
 }
 
 .break {
@@ -15,16 +21,35 @@ body {
   height: 100%;
   width: 100%;
   position: absolute;
-  -webkit-backdrop-filter: hue-rotate(120deg);
-          backdrop-filter: hue-rotate(120deg);
   background: rgba(0, 0, 0, 0.7);
   z-index: -1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 900;
 }
 
 h1 {
   font-size: 4.8rem;
   color: #fff;
   text-transform: uppercase;
+}
+
+h2 {
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.4rem;
 }
 
 .btn-primary,
@@ -49,9 +74,8 @@ h1 {
 
 /* HERO */
 .hero {
-  min-height: 100vh;
+  height: 100vh;
   /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -120,13 +144,57 @@ h1 {
   display: flex;
   gap: 1.2rem;
   flex-grow: 1;
-  align-items: center;
+  align-items: flex-end;
+  padding: 4.8rem;
 }
-
 .hero-buttons * {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 150px;
+}
+
+.section-services {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.section-services svg {
+  width: 3.2rem;
+}
+.section-services .service-title {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.section-services .service {
+  margin-bottom: 3.2rem;
+}
+.section-services .service:last-child {
+  margin-bottom: 0;
+}
+.section-services .img-container {
+  flex-grow: 1;
+}
+.section-services .img-container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.our-work .our-work-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+  width: 100%;
+  gap: 1.2rem;
+}
+.our-work .our-work-content img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 200px;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
