@@ -73,6 +73,8 @@ p {
 	color: #fff;
 }
 
+// loader
+
 /* HERO */
 .hero {
 	height: 100vh; /* Fallback for browsers that do not support Custom Properties */
@@ -132,15 +134,20 @@ p {
 	align-items: center;
 	flex-grow: 1;
 	padding: 1.6rem;
+	justify-content: center;
 }
 
 .hero-title {
-	display: flex;
-	flex-grow: 1;
-	align-items: center;
+	// display: flex;
+	// flex-grow: 1;
+	// align-items: center;
+	text-align: center;
+	margin-bottom: 4.8rem;
+	line-height: 1;
 
 	.h1-top {
-		font-size: 2.4rem;
+		font-size: 2rem;
+		color: rgb(216, 214, 214);
 	}
 	.h1-bot {
 		font-size: 3.6rem;
@@ -148,10 +155,10 @@ p {
 }
 
 .hero-buttons {
-	display: flex;
+	// display: flex;
 	gap: 1.2rem;
-	flex-grow: 1;
-	align-items: flex-start;
+	// flex-grow: 1;
+	// align-items: flex-start;
 	// padding: 4.8rem;
 
 	* {
@@ -170,6 +177,10 @@ p {
 	position: relative;
 	display: flex;
 	flex-direction: column;
+
+	.section-content {
+		padding-bottom: 0;
+	}
 
 	svg {
 		width: 3.2rem;
@@ -303,5 +314,91 @@ p {
 		bottom: 7.5%;
 		right: 50%;
 		transform: translate(50%);
+	}
+}
+
+// LOADER
+
+.loader-wrapper {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #1e4540;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loader {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	position: relative;
+	border: 4px solid #fff;
+	animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+	vertical-align: top;
+	display: inline-block;
+	width: 100%;
+	background-color: #fff;
+	animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	25% {
+		transform: rotate(180deg);
+	}
+
+	50% {
+		transform: rotate(180deg);
+	}
+
+	75% {
+		transform: rotate(360deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes loader-inner {
+	0% {
+		height: 0%;
+	}
+
+	25% {
+		height: 0%;
+	}
+
+	50% {
+		height: 100%;
+	}
+
+	75% {
+		height: 100%;
+	}
+
+	100% {
+		height: 0%;
+	}
+}
+
+.disappear {
+	animation: vanish 1s forwards;
+}
+
+@keyframes vanish {
+	100% {
+		opacity: 0;
+		visibility: hidden;
 	}
 }

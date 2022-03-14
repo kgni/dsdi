@@ -20,7 +20,15 @@
 	</head>
 	<body>
 		<section class="hero">
-			<img class="hero-img" src="/assets/img/hero.jpg" alt="" />
+			<video
+				disablePictureInPicture
+				class="hero-img"
+				src="/assets/video/hero-video.mp4"
+				autoplay
+				muted
+				loop
+			></video>
+			<!-- <img class="hero-img" src="/assets/img/hero.jpg" alt="" /> -->
 			<div class="blur"></div>
 			<header class="main-header">
 				<nav class="main-nav">
@@ -31,23 +39,23 @@
 						<li><a href="/">Priser</a></li>
 						<li><a href="/">Kontakt</a></li>
 					</ul>
-					<div class="burger">
+					<!-- <div class="burger">
 						<div></div>
 						<div></div>
 						<div></div>
-					</div>
+					</div> -->
 				</nav>
 			</header>
 			<section class="hero-content">
 				<div class="hero-title">
 					<h1>
-						<span class="h1-top">Dansk-Spansk</span
+						<span class="h1-top">Dansk/Spansk</span
 						><span class="h1-bot break">Drone industri</span>
 					</h1>
 				</div>
 				<div class="hero-buttons">
-					<a href="/" class="btn-secondary">priser</a>
-					<a href="/" class="btn-primary">kontakt</a>
+					<!-- <a href="/" class="btn-secondary">priser</a> -->
+					<a href="#contact" class="btn-primary">kontakt</a>
 				</div>
 			</section>
 		</section>
@@ -101,9 +109,9 @@
 					</div>
 				</div>
 			</div>
-			<img class="" src="/assets/img/services.jpg" alt="" />
+			<!-- <img class="" src="/assets/img/services.jpg" alt="" /> -->
 		</section>
-		<section class="our-work container">
+		<!-- <section class="our-work container">
 			<h2>Vores arbejde</h2>
 
 			<div class="our-work-content">
@@ -114,8 +122,8 @@
 				<img src="assets/img/hero.jpg" alt="" />
 				<img src="assets/img/hero.jpg" alt="" />
 			</div>
-		</section>
-		<section class="section-contact container">
+		</section> -->
+		<section id="contact" class="section-contact container">
 			<h2>Kontakt</h2>
 			<p>Har du brug for professionelle billeder fra luften?</p>
 			<p>Vi er klar til at hjælpe dig!</p>
@@ -130,15 +138,15 @@
 		</section>
 		<footer class="main-footer">
 			<div class="social-media">
-				<a href="/">
+				<!-- <a href="/">
 					<i class="fa-brands fa-vimeo-v"></i>
-				</a>
+				</a> -->
 
-				<a href="/">
+				<a href="https://www.youtube.com/user/Niejens">
 					<i class="fa-brands fa-youtube"></i>
 				</a>
 
-				<a href="">
+				<a href="mailto:gjerluf@nielsen.mail.dk">
 					<i class="fa-solid fa-envelope"></i>
 				</a>
 			</div>
@@ -149,6 +157,10 @@
 				</script>
 			</span>
 		</footer>
+
+		<div class="loader-wrapper">
+			<span class="loader"><span class="loader-inner"></span></span>
+		</div>
 		<script src="/js/viewportfix.js"></script>
 		<script src="/js/main.js"></script>
 	</body>
