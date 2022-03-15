@@ -43,7 +43,7 @@ h1 {
 h2 {
 	font-size: 3.2rem;
 	text-transform: uppercase;
-	margin-bottom: 2.4rem;
+	margin-bottom: 4.2rem;
 }
 
 h4 {
@@ -146,11 +146,11 @@ p {
 	line-height: 1;
 
 	.h1-top {
-		font-size: 2rem;
+		font-size: clamp(2rem, 2vw, 22rem);
 		color: rgb(216, 214, 214);
 	}
 	.h1-bot {
-		font-size: 3.6rem;
+		font-size: clamp(3.6rem, 6vw, 36rem);
 	}
 }
 
@@ -175,15 +175,13 @@ p {
 
 .section-services {
 	position: relative;
-	display: flex;
-	flex-direction: column;
-
-	.section-content {
-		padding-bottom: 0;
-	}
+	background-color: #1e4540;
+	color: #fff;
 
 	svg {
 		width: 3.2rem;
+		stroke: #fff;
+		fill: #fff;
 	}
 
 	.service-title {
@@ -191,11 +189,19 @@ p {
 		align-items: center;
 		gap: 1.2rem;
 		margin-bottom: 1.2rem;
+
+		i {
+			font-size: 2.4rem;
+		}
+	}
+
+	.services {
+		display: flex;
+		flex-direction: column;
+		gap: 2.4rem;
 	}
 
 	.service {
-		margin-bottom: 3.2rem;
-
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -231,10 +237,14 @@ p {
 }
 
 .section-contact {
+	max-width: 900px;
+	margin: 0 auto;
 	.top-row {
 		display: flex;
 		gap: 0.8rem;
 		margin-bottom: 0.8rem;
+	}
+	form {
 	}
 	input {
 		width: 50%;
@@ -242,8 +252,9 @@ p {
 	}
 
 	h2 {
-		margin-bottom: 1.2rem;
+		margin-bottom: 4.2rem;
 	}
+
 	textarea {
 		resize: none;
 		width: 100%;
@@ -400,5 +411,59 @@ p {
 	100% {
 		opacity: 0;
 		visibility: hidden;
+	}
+}
+
+@media (min-width: 700px) {
+	h2,
+	.section-contact h2 {
+		font-size: 4.8rem;
+		margin-bottom: 2.4rem;
+	}
+
+	.section-content h2 {
+		text-align: center;
+		margin-bottom: 4.2rem;
+	}
+
+	.section-services {
+		.services {
+			display: flex;
+			flex-direction: unset;
+			justify-content: center;
+			gap: 3.2rem;
+		}
+		.service {
+			// flex: 1;
+		}
+	}
+}
+
+@media (min-width: 987px) {
+	h2,
+	.section-contact h2 {
+		font-size: 4.8rem;
+		margin-bottom: 2.4rem;
+	}
+
+	.section-content {
+		padding: 6.4rem;
+	}
+
+	.section-content h2 {
+		text-align: center;
+		margin-bottom: 4.2rem;
+	}
+
+	.section-services {
+		.services {
+			display: flex;
+			flex-direction: unset;
+			justify-content: center;
+			gap: 6.4rem;
+		}
+		.service {
+			// flex: 1;
+		}
 	}
 }
